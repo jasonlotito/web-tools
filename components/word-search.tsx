@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { X, Printer, RefreshCw, Save, Trash, ChevronDown, ChevronUp, Minimize, Eye, EyeOff, Download } from "lucide-react"
+import { X, Printer, RefreshCw, Save, Trash, ChevronDown, ChevronUp, Minimize, Download } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -91,8 +91,8 @@ const WordSearch: React.FC = () => {
     let success = false
 
     while (!success && currentGridSize <= MAX_GRID_SIZE) {
-      let newGrid = Array(currentGridSize).fill(null).map(() => Array(currentGridSize).fill(''))
-      let newWordPositions: WordPosition[] = []
+      const newGrid = Array(currentGridSize).fill(null).map(() => Array(currentGridSize).fill(''))
+      const newWordPositions: WordPosition[] = []
       success = true
 
       for (const word of words) {
@@ -160,8 +160,8 @@ const WordSearch: React.FC = () => {
       let success = false
 
       while (!success && currentGridSize <= MAX_GRID_SIZE) {
-        let newGrid = Array(currentGridSize).fill(null).map(() => Array(currentGridSize).fill(''))
-        let newWordPositions: WordPosition[] = []
+        const newGrid = Array(currentGridSize).fill(null).map(() => Array(currentGridSize).fill(''))
+        const newWordPositions: WordPosition[] = []
         success = true
 
         for (const word of words) {

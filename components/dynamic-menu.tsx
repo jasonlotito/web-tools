@@ -5,12 +5,6 @@ import WordSearch from "@/components/word-search";
 import {WordleCloneComponent} from "@/components/wordle-clone";
 import {TextToJsonConverter} from "@/components/text-to-json-converter";
 
-// Sample components for each route
-const Home = () => <div className="p-4">Welcome to the Home page!</div>
-const About = () => <div className="p-4">Learn more about us on the About page.</div>
-const Services = () => <div className="p-4">Check out our Services!</div>
-const Contact = () => <div className="p-4">Get in touch with us on the Contact page.</div>
-
 const navItems = [
   { name: 'Word Search', component: WordSearch },
   { name: 'Wordle Run', component: WordleCloneComponent },

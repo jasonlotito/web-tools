@@ -163,7 +163,7 @@ export function GmNotebook() {
   const [relationshipTargetNote, setRelationshipTargetNote] = useState<Note | null>(null)
   const [relationshipType, setRelationshipType] = useState("")
   const [isRelationshipDialogOpen, setIsRelationshipDialogOpen] = useState(false)
-  const [editRelationship, setEditRelationship] = useState(0)
+  //const [editRelationship, setEditRelationship] = useState(0)
 
   const notesColumnRef = useRef<HTMLDivElement>(null)
   const relationshipInputRef = useRef<HTMLInputElement>(null)
@@ -240,7 +240,7 @@ export function GmNotebook() {
       const updatedNotebooks = notebooks.filter(nb => nb.id !== currentNotebook.id)
       setNotebooks(updatedNotebooks)
       localStorage.setItem("notebooks", JSON.stringify(updatedNotebooks))
-      
+
       if (updatedNotebooks.length > 0) {
         setCurrentNotebook(updatedNotebooks[0])
         setNotes(updatedNotebooks[0].notes)
@@ -535,13 +535,13 @@ export function GmNotebook() {
                     <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                     <AlertDialogDescription>
                       This action cannot be undone. This will permanently delete the
-                      notebook "{currentNotebook.name}" and all its notes.
+                      notebook &quot;{currentNotebook.name}&quot; and all its notes.
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <div className="grid gap-4 py-4">
                     <div className="grid grid-cols-4 items-center gap-4">
                       <Label htmlFor="confirm-delete" className="text-right">
-                        Type "delete {currentNotebook.name}" to confirm:
+                        Type &quot;delete {currentNotebook.name}&quot; to confirm:
                       </Label>
                       <Input
                         id="confirm-delete"

@@ -210,6 +210,7 @@ export function GmNotebook() {
           { id: 2, name: "Column 2", width: 250 },
           { id: 3, name: "Column 3", width: 250 },
         ],
+        relationships: [],
         allTags: [],
       }
       setNotebooks([...notebooks, newNotebook])

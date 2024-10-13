@@ -4,11 +4,14 @@ import { useState } from 'react'
 import WordSearch from "@/components/word-search";
 import {WordleCloneComponent} from "@/components/wordle-clone";
 import {TextToJsonConverter} from "@/components/text-to-json-converter";
+import {GmNotebook} from "@/components/gm-notebook";
+import {KeyboardShortcutsHelp} from "./keyboard-shortcuts-help";
 
 const navItems = [
   { name: 'Word Search', component: WordSearch },
   { name: 'Wordle Run', component: WordleCloneComponent },
-  { name: 'Text2JSON', component: TextToJsonConverter }
+  { name: 'Text2JSON', component: TextToJsonConverter },
+  { name: 'GM Notebook (WIP)', component: GmNotebook}
 ]
 
 export function DynamicMenuComponent() {
@@ -88,6 +91,7 @@ export function DynamicMenuComponent() {
           <ActiveComponent />
         </div>
       </main>
+      <KeyboardShortcutsHelp />
     </div>
   )
 }
